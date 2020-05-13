@@ -90,3 +90,39 @@ if firefly == enterprise {
 //: ## Protocols as Types
 
 
+// Make a protocol called Animal
+// The protocol needs to have a property called numberOfLegs: Int
+// and a function called func speak()
+// Create two or more data types (class or struct) that adopt and conform to this protocol.
+// Cat and Dog for example
+
+protocol Animal {
+    let numberOfLegs: Int { get }
+    func Speak() {
+    }
+}
+
+class Dog: Animal {
+    
+    let numberOfLegs: Int
+    
+    init(numberOfLegs: Int = 4) {
+        self.numberOfLegs = numberOfLegs
+    }
+    func speak() {
+        print("Bark, Bark")
+    }
+}
+
+class Sloth: Animal {
+    
+    let numberOfLegs: Int
+    
+    init(numberOfLegs: Int = 4) {
+        self.numberOfLegs = numberOfLegs
+    }
+    
+    func speak() {
+        print("Moom, Mooom")
+    }
+}
